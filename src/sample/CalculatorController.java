@@ -25,6 +25,22 @@ public class CalculatorController implements Initializable {
 
     }
     @FXML
+    private void handleSubtractionAction(ActionEvent event){
+        double first= Double.parseDouble(firstNumberTextField.getText());
+        double second= Double.parseDouble(secondNumberTextField.getText());
+        double result = first - second;
+        resultTextField.setText(String.valueOf(result));
+
+    }
+    @FXML
+    private void handleDivisionAction(ActionEvent event){
+        double first= Double.parseDouble(firstNumberTextField.getText());
+        double second= Double.parseDouble(secondNumberTextField.getText());
+        double result = first / second;
+        resultTextField.setText(String.valueOf(result));
+
+    }
+    @FXML
     private void handleMultiplicationAction(ActionEvent event){
         double first= Double.parseDouble(firstNumberTextField.getText());
         double second= Double.parseDouble(secondNumberTextField.getText());
@@ -32,7 +48,6 @@ public class CalculatorController implements Initializable {
         resultTextField.setText(String.valueOf(result));
 
     }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
